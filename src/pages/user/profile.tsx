@@ -24,9 +24,17 @@ const ProfilePage = ({ firstname, lastname, email, image }: Props) => {
 
 export async function getServerSideProps(ctx) {
   const session = await getSession({ req: ctx.req });
+  if (!session) {
+    return {
+      redirect: {
+        permanent: false,
+        destination: "/",
+      },
+    };
+  }
   const user = await prisma.user.findFirst({
     where: {
-      id: session.id,
+      username: session.username,
     },
   });
 

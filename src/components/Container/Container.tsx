@@ -2,9 +2,9 @@ import Image from "next/image";
 
 const Container = () => {
   return (
-    <section className="text-gray-600 body-font w-full bg-gray-100 bg-opacity-30 mt-10">
+    <section className="text-gray-600 dark:bg-gray-900 body-font w-full bg-gray-100 bg-opacity-30 mt-10">
       <div className="flex">
-        <div className="flex flex-col justify-center items-center w-2/4 text-black space-y-5">
+        <div className="flex flex-col justify-center items-center w-2/4 text-black dark:text-gray-100 space-y-5">
           <span className="text-3xl font-bold font-roboto">
             Do you have a server you want to advertise?
           </span>

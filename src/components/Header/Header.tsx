@@ -54,12 +54,11 @@ const Header = () => {
         <div className="text-gray-600 font-bold text-3xl cursor-pointer font-roboto flex justify-center items-center py-3">
           <a
             href="/"
-            className="text-gray-600 font-roboto hover:text-gray-500 transition tracking-widest leading-loose"
+            className="text-gray-600 dark:text-gray-100 font-roboto hover:text-gray-500 transition tracking-widest leading-loose"
           >
             GREEK FIVEM
           </a>
         </div>
-        <ToggleDark />
         <div className="mr-2 flex space-x-1">
           <Nav icon={faHome} label="HOME" link="/" />
           <Nav icon={faListAlt} label="FEATURES" link="/features" />
@@ -79,7 +78,7 @@ const Header = () => {
           {session && (
             <Menu as="div" className="relative inline-block text-left">
               <div>
-                <Menu.Button className="inline-flex justify-center items-center space-x-2 w-full px-4 py-2 text-sm font-medium text-white bg-black rounded-md bg-opacity-90 hover:bg-opacity-80 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75">
+                <Menu.Button className="inline-flex justify-center items-center space-x-2 w-full px-4 py-2 text-sm font-medium text-white bg-black dark:bg-gray-200 dark:text-black rounded-md bg-opacity-90 hover:bg-opacity-80 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75">
                   <span>Welcome, {session.username!}</span>
                   <FontAwesomeIcon icon={faArrowDown} />
                 </Menu.Button>
@@ -96,6 +95,7 @@ const Header = () => {
             </button>
           )}
         </div>
+        <ToggleDark />
       </div>
       {isOpenedRegistered && (
         <Register
