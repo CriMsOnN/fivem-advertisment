@@ -21,7 +21,7 @@ const Streamers = () => {
             ></iframe> */}
             <iframe
               loading="lazy"
-              src="https://player.twitch.tv/?channel=cr1msonnn&amp;parent=localhost&amp;muted=true"
+              src="https://player.twitch.tv/?channel=cr1msonnn&amp;parent=ivem-greece.vercel.app/&amp;muted=true"
               width="400"
               height="300"
               scrolling="no"
@@ -31,7 +31,7 @@ const Streamers = () => {
           <div className="border-2 border-blue-500">
             <iframe
               loading="lazy"
-              src="https://player.twitch.tv/?channel=cr1msonnn&amp;parent=localhost&amp;muted=true"
+              src="https://player.twitch.tv/?channel=cr1msonnn&amp;parent=fivem-greece.vercel.app/&amp;muted=true"
               width="400"
               height="300"
               scrolling="no"
@@ -41,7 +41,7 @@ const Streamers = () => {
           <div className="border-2 border-blue-500">
             <iframe
               loading="lazy"
-              src="https://player.twitch.tv/?channel=cr1msonnn&amp;parent=localhost&amp;muted=true"
+              src="https://player.twitch.tv/?channel=cr1msonnn&amp;parent=fivem-greece.vercel.app/&amp;muted=true"
               width="400"
               height="300"
               scrolling="no"
@@ -51,7 +51,7 @@ const Streamers = () => {
           <div className="border-2 border-blue-500">
             <iframe
               loading="lazy"
-              src="https://player.twitch.tv/?channel=cr1msonnn&amp;parent=localhost&amp;muted=true"
+              src="https://player.twitch.tv/?channel=cr1msonnn&amp;parent=fivem-greece.vercel.app/&amp;muted=true"
               width="400"
               height="300"
               scrolling="no"
@@ -61,7 +61,7 @@ const Streamers = () => {
           <div className="border-2 border-blue-500">
             <iframe
               loading="lazy"
-              src="https://player.twitch.tv/?channel=cr1msonnn&amp;parent=localhost&amp;muted=true"
+              src="https://player.twitch.tv/?channel=cr1msonnn&amp;parent=fivem-greece.vercel.app/&amp;muted=true"
               width="400"
               height="300"
               scrolling="no"
@@ -71,7 +71,7 @@ const Streamers = () => {
           <div className="border-2 border-blue-500">
             <iframe
               loading="lazy"
-              src="https://player.twitch.tv/?channel=cr1msonnn&amp;parent=localhost&amp;muted=true"
+              src="https://player.twitch.tv/?channel=cr1msonnn&amp;parent=fivem-greece.vercel.app/&amp;muted=true"
               width="400"
               height="300"
               scrolling="no"
@@ -81,7 +81,7 @@ const Streamers = () => {
           <div className="border-2 border-blue-500">
             <iframe
               loading="lazy"
-              src="https://player.twitch.tv/?channel=cr1msonnn&amp;parent=localhost&amp;muted=true"
+              src="https://player.twitch.tv/?channel=cr1msonnn&amp;parent=fivem-greece.vercel.app/&amp;muted=true"
               width="400"
               height="300"
               scrolling="no"
@@ -91,7 +91,7 @@ const Streamers = () => {
           <div className="border-2 border-blue-500">
             <iframe
               loading="lazy"
-              src="https://player.twitch.tv/?channel=cr1msonnn&amp;parent=localhost&amp;muted=true"
+              src="https://player.twitch.tv/?channel=cr1msonnn&amp;parent=fivem-greece.vercel.app/&amp;muted=true"
               width="400"
               height="300"
               scrolling="no"
@@ -101,7 +101,7 @@ const Streamers = () => {
           <div className="border-2 border-blue-500">
             <iframe
               loading="lazy"
-              src="https://player.twitch.tv/?channel=cr1msonnn&amp;parent=localhost&amp;muted=true"
+              src="https://player.twitch.tv/?channel=cr1msonnn&amp;parent=fivem-greece.vercel.app/&amp;muted=true"
               width="400"
               height="300"
               scrolling="no"
@@ -111,7 +111,7 @@ const Streamers = () => {
           <div className="border-2 border-blue-500">
             <iframe
               loading="lazy"
-              src="https://player.twitch.tv/?channel=cr1msonnn&amp;parent=localhost&amp;muted=true"
+              src="https://player.twitch.tv/?channel=cr1msonnn&amp;parent=fivem-greece.vercel.app/&amp;muted=true"
               width="400"
               height="300"
               scrolling="no"
@@ -121,7 +121,7 @@ const Streamers = () => {
           <div className="border-2 border-blue-500">
             <iframe
               loading="lazy"
-              src="https://player.twitch.tv/?channel=cr1msonnn&amp;parent=localhost&amp;muted=true"
+              src="https://player.twitch.tv/?channel=cr1msonnn&amp;parent=fivem-greece.vercel.app/&amp;muted=true"
               width="400"
               height="300"
               scrolling="no"
@@ -131,7 +131,7 @@ const Streamers = () => {
           <div className="border-2 border-blue-500">
             <iframe
               loading="lazy"
-              src="https://player.twitch.tv/?channel=cr1msonnn&amp;parent=localhost&amp;muted=true"
+              src="https://player.twitch.tv/?channel=cr1msonnn&amp;parent=fivem-greece.vercel.app/&amp;muted=true"
               width="400"
               height="300"
               scrolling="no"
