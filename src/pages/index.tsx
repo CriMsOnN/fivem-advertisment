@@ -24,13 +24,14 @@ export default function Home() {
               Warning
             </span>
             <p className="text-sm text-gray-600 dark:text-gray-200">
-              Site is under development
+              Site is under development. All streams and servers are
+              placeholders
             </p>
           </div>
         </div>
       </div>
       <Container />
-      {/* <Streamers /> */}
+      <Streamers />
     </div>
   );
 }
