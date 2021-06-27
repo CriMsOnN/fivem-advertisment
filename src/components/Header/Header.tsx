@@ -14,6 +14,11 @@ import { useToasts } from "react-toast-notifications";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Menu, Transition } from "@headlessui/react";
 import Dropdown from "../DropDown/Dropdown";
+import dynamic from "next/dynamic";
+
+const ToggleDark = dynamic(() => import("./ToggleDark"), {
+  ssr: false,
+});
 
 const Header = () => {
   const { addToast } = useToasts();
@@ -54,7 +59,7 @@ const Header = () => {
             GREEK FIVEM
           </a>
         </div>
-
+        <ToggleDark />
         <div className="mr-2 flex space-x-1">
           <Nav icon={faHome} label="HOME" link="/" />
           <Nav icon={faListAlt} label="FEATURES" link="/features" />

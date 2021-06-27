@@ -8,6 +8,8 @@ import { Provider } from "next-auth/client";
 import { ToastProvider } from "react-toast-notifications";
 import Layout from "~/components/Layout/Layout";
 
+import Head from "next/head";
+
 const App: React.FC<AppProps> = ({ Component, pageProps }) => {
   const router = useRouter();
 
