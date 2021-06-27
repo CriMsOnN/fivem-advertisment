@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { TwitchEmbed, TwitchPlayer } from "react-twitch-embed";
 
 const Streamers = () => {
   return (
@@ -19,124 +20,160 @@ const Streamers = () => {
               scrolling="no"
               allowFullScreen={true}
             ></iframe> */}
-            <iframe
-              loading="lazy"
-              src="https://player.twitch.tv/?channel=cr1msonnn&amp;parent=fivem-greece.vercel.app/&amp;muted=true"
-              width="400"
-              height="300"
-              scrolling="no"
-              allowFullScreen={true}
-            ></iframe>
+            <TwitchPlayer
+              channel="cr1msonnn"
+              id="cr1msonnn1"
+              theme="dark"
+              muted={true}
+              width={400}
+              height={300}
+              autoplay={true}
+              hideControls={true}
+              className="border-2 border-indigo-500"
+            />
           </div>
           <div className="border-2 border-blue-500">
-            <iframe
-              loading="lazy"
-              src="https://player.twitch.tv/?channel=cr1msonnn&amp;parent=fivem-greece.vercel.app/&amp;muted=true"
-              width="400"
-              height="300"
-              scrolling="no"
-              allowFullScreen={true}
-            ></iframe>
+            <TwitchPlayer
+              channel="cr1msonnn"
+              id="cr1msonnn2"
+              theme="dark"
+              muted={true}
+              width={400}
+              height={300}
+              autoplay={true}
+              hideControls={true}
+              className="border-2 border-indigo-500"
+            />
           </div>
           <div className="border-2 border-blue-500">
-            <iframe
-              loading="lazy"
-              src="https://player.twitch.tv/?channel=cr1msonnn&amp;parent=fivem-greece.vercel.app/&amp;muted=true"
-              width="400"
-              height="300"
-              scrolling="no"
-              allowFullScreen={true}
-            ></iframe>
+            <TwitchPlayer
+              channel="cr1msonnn"
+              id="cr1msonnn3"
+              theme="dark"
+              muted={true}
+              width={400}
+              height={300}
+              autoplay={true}
+              hideControls={true}
+              className="border-2 border-indigo-500"
+            />
           </div>
           <div className="border-2 border-blue-500">
-            <iframe
-              loading="lazy"
-              src="https://player.twitch.tv/?channel=cr1msonnn&amp;parent=fivem-greece.vercel.app/&amp;muted=true"
-              width="400"
-              height="300"
-              scrolling="no"
-              allowFullScreen={true}
-            ></iframe>
+            <TwitchPlayer
+              channel="cr1msonnn"
+              id="cr1msonnn4"
+              theme="dark"
+              muted={true}
+              width={400}
+              height={300}
+              autoplay={true}
+              hideControls={true}
+              className="border-2 border-indigo-500"
+            />
           </div>
           <div className="border-2 border-blue-500">
-            <iframe
-              loading="lazy"
-              src="https://player.twitch.tv/?channel=cr1msonnn&amp;parent=fivem-greece.vercel.app/&amp;muted=true"
-              width="400"
-              height="300"
-              scrolling="no"
-              allowFullScreen={true}
-            ></iframe>
+            <TwitchPlayer
+              channel="cr1msonnn"
+              id="cr1msonnn5"
+              theme="dark"
+              muted={true}
+              width={400}
+              height={300}
+              autoplay={true}
+              hideControls={true}
+              className="border-2 border-indigo-500"
+            />
           </div>
           <div className="border-2 border-blue-500">
-            <iframe
-              loading="lazy"
-              src="https://player.twitch.tv/?channel=cr1msonnn&amp;parent=fivem-greece.vercel.app/&amp;muted=true"
-              width="400"
-              height="300"
-              scrolling="no"
-              allowFullScreen={true}
-            ></iframe>
+            <TwitchPlayer
+              channel="cr1msonnn"
+              id="cr1msonnn6"
+              theme="dark"
+              muted={true}
+              width={400}
+              height={300}
+              autoplay={true}
+              hideControls={true}
+              className="border-2 border-indigo-500"
+            />
           </div>
           <div className="border-2 border-blue-500">
-            <iframe
-              loading="lazy"
-              src="https://player.twitch.tv/?channel=cr1msonnn&amp;parent=fivem-greece.vercel.app/&amp;muted=true"
-              width="400"
-              height="300"
-              scrolling="no"
-              allowFullScreen={true}
-            ></iframe>
+            <TwitchPlayer
+              channel="cr1msonnn"
+              id="cr1msonnn7"
+              theme="dark"
+              muted={true}
+              width={400}
+              height={300}
+              autoplay={true}
+              hideControls={true}
+              className="border-2 border-indigo-500"
+            />
           </div>
           <div className="border-2 border-blue-500">
-            <iframe
-              loading="lazy"
-              src="https://player.twitch.tv/?channel=cr1msonnn&amp;parent=fivem-greece.vercel.app/&amp;muted=true"
-              width="400"
-              height="300"
-              scrolling="no"
-              allowFullScreen={true}
-            ></iframe>
+            <TwitchPlayer
+              channel="cr1msonnn"
+              id="cr1msonnn8"
+              theme="dark"
+              muted={true}
+              width={400}
+              height={300}
+              autoplay={true}
+              hideControls={true}
+              className="border-2 border-indigo-500"
+            />
           </div>
           <div className="border-2 border-blue-500">
-            <iframe
-              loading="lazy"
-              src="https://player.twitch.tv/?channel=cr1msonnn&amp;parent=fivem-greece.vercel.app/&amp;muted=true"
-              width="400"
-              height="300"
-              scrolling="no"
-              allowFullScreen={true}
-            ></iframe>
+            <TwitchPlayer
+              channel="cr1msonnn"
+              id="cr1msonnn9"
+              theme="dark"
+              muted={true}
+              width={400}
+              height={300}
+              autoplay={true}
+              hideControls={true}
+              className="border-2 border-indigo-500"
+            />
           </div>
           <div className="border-2 border-blue-500">
-            <iframe
-              loading="lazy"
-              src="https://player.twitch.tv/?channel=cr1msonnn&amp;parent=fivem-greece.vercel.app/&amp;muted=true"
-              width="400"
-              height="300"
-              scrolling="no"
-              allowFullScreen={true}
-            ></iframe>
+            <TwitchPlayer
+              channel="cr1msonnn"
+              id="cr1msonnn10"
+              theme="dark"
+              muted={true}
+              width={400}
+              height={300}
+              autoplay={true}
+              hideControls={true}
+              className="border-2 border-indigo-500"
+            />
           </div>
           <div className="border-2 border-blue-500">
-            <iframe
-              loading="lazy"
-              src="https://player.twitch.tv/?channel=cr1msonnn&amp;parent=fivem-greece.vercel.app/&amp;muted=true"
-              width="400"
-              height="300"
-              scrolling="no"
-              allowFullScreen={true}
-            ></iframe>
+            <TwitchPlayer
+              channel="cr1msonnn"
+              id="cr1msonnn11"
+              theme="dark"
+              muted={true}
+              width={400}
+              height={300}
+              autoplay={true}
+              hideControls={true}
+              className="border-2 border-indigo-500"
+            />
           </div>
           <div className="border-2 border-blue-500">
-            <iframe
-              loading="lazy"
-              src="https://player.twitch.tv/?channel=cr1msonnn&amp;parent=fivem-greece.vercel.app/&amp;muted=true"
-              width="400"
-              height="300"
-              scrolling="no"
-              allowFullScreen={true}
-            ></iframe>
+            <TwitchPlayer
+              channel="cr1msonnn"
+              id="cr1msonnn12"
+              theme="dark"
+              muted={true}
+              width={400}
+              height={300}
+              autoplay={true}
+              hideControls={true}
+              className="border-2 border-indigo-500"
+            />
           </div>
         </div>
       </div>
