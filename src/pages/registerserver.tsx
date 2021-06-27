@@ -1,9 +1,5 @@
 const registerserver = () => {
-  return (
-    <div>
-      <form onSubmit={handleSubmit}></form>
-    </div>
-  );
+  return <div></div>;
 };
 
 export default registerserver;
