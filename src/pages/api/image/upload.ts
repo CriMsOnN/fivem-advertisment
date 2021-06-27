@@ -23,7 +23,6 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
 
   console.log(req.body.url);
   if (user) {
-    console.log("we have a user1");
     await prisma.user.update({
       where: {
         email: session.user.email,
@@ -32,7 +31,6 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
         image: req.body.url,
       },
     });
-    console.log("we have a user2");
 
     res.status(200).json({ url: req.body.url });
   }

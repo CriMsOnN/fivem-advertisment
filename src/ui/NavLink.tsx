@@ -12,9 +12,9 @@ interface Props {
 const NavLink = ({ link, icon, label }: Props) => {
   const router = useRouter();
   return (
-    <a href={link} className="group">
+    <div onClick={() => router.push(link)} className="group">
       <div
-        className={`space-x-1 flex justify-center items-center px-2 py-3 rounded transition duration-200 ${
+        className={`cursor-pointer space-x-1 flex justify-center items-center px-2 py-3 rounded transition duration-200 ${
           router.pathname === link ? "text-gray-800" : "text-gray-400"
         }`}
       >
@@ -26,7 +26,7 @@ const NavLink = ({ link, icon, label }: Props) => {
           {label}
         </span>
       </div>
-    </a>
+    </div>
   );
 };
 

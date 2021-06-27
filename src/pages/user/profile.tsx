@@ -1,4 +1,4 @@
-import { getSession } from "next-auth/client";
+import { getSession, useSession } from "next-auth/client";
 import Profile from "~/components/User/Profile";
 import prisma from "~/lib/prisma";
 
@@ -6,24 +6,16 @@ interface Props {
   firstname: string;
   lastname: string;
   email: string;
-  username: string;
   image: string;
 }
 
-const ProfilePage = ({
-  firstname,
-  lastname,
-  email,
-  username,
-  image,
-}: Props) => {
+const ProfilePage = ({ firstname, lastname, email, image }: Props) => {
   return (
     <div>
       <Profile
         firstname={firstname}
         lastname={lastname}
         email={email}
-        username={username}
         image={image}
       />
     </div>

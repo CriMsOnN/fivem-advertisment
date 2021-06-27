@@ -13,6 +13,7 @@ import { faWpforms } from "@fortawesome/free-brands-svg-icons";
 
 import { signOut, useSession } from "next-auth/client";
 import Link from "next/link";
+import { useRouter } from "next/router";
 
 interface Props {
   opened: boolean;
@@ -21,6 +22,7 @@ interface Props {
 
 const Dropdown = () => {
   const [session] = useSession();
+  const router = useRouter();
   return (
     <>
       <Transition
@@ -36,15 +38,15 @@ const Dropdown = () => {
           <div className="px-1 py-1 ">
             <Menu.Item>
               {({ active }) => (
-                <a
-                  href="/user/profile"
+                <div
+                  onClick={() => router.push("/user/profile")}
                   className={`${
                     active ? "bg-indigo-500 text-white" : "text-gray-900"
                   } group flex rounded-md items-center w-full px-2 py-2 text-sm font-normal`}
                 >
                   <FontAwesomeIcon icon={faUserNinja} className="mr-2" />
                   Profile
-                </a>
+                </div>
               )}
             </Menu.Item>
           </div>

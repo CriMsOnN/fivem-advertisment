@@ -22,7 +22,12 @@ const configuration = {
         token.email = user.email;
       }
       if (user?.username) {
-        token.username = user.username;
+        const result = await prisma.user.findUnique({
+          where: {
+            email: user?.email,
+          },
+        });
+        token.username = result.username;
       }
 
       if (user?.role) {
@@ -34,7 +39,12 @@ const configuration = {
     async session(session, token) {
       session.userID = token.id;
       session.email = token.email;
-      session.username = token.username;
+      const result = await prisma.user.findUnique({
+        where: {
+          email: session.email,
+        },
+      });
+      session.username = result.username;
       session.role = token.role;
       return session;
     },

@@ -3,33 +3,69 @@ import { getSession, useSession } from "next-auth/client";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEdit } from "@fortawesome/free-solid-svg-icons";
 import ProfileModal from "./ProfileModal";
-import { useState } from "react";
-import { PrismaClient } from "@prisma/client";
+import React, { useState, useEffect } from "react";
+import { useToasts } from "react-toast-notifications";
 
 interface Props {
   firstname: string;
   lastname: string;
   email: string;
-  username: string;
   image: string;
 }
 
-const Profile = ({
-  firstname,
-  lastname,
-  email,
-  username,
-  image: image_url,
-}: Props) => {
+const Profile = ({ firstname, lastname, email, image: image_url }: Props) => {
   const [isOpened, setIsOpened] = useState(false);
   const [image, setImage] = useState(image_url);
-  const [session] = useSession();
+  const [session, isLoading] = useSession();
+  const [hasUsername, setHasUsername] = useState("");
+  const { addToast } = useToasts();
+  const [isInput, setIsInput] = useState(false);
 
   const onClose = () => {};
 
   const handleSuccess = (str) => {
-    console.log(str);
     setImage(str);
+  };
+
+  useEffect(() => {
+    if (!isLoading) {
+      setHasUsername(session.username as string);
+    }
+  }, [isLoading]);
+
+  const handleSubmit = async (event) => {
+    if (hasUsername === "") {
+      event.preventDefault();
+      return addToast("You cant have an empty username", {
+        appearance: "error",
+        autoDismiss: true,
+      });
+    } else if (hasUsername === session.username) {
+      event.preventDefault();
+      setIsInput(!isInput);
+      return;
+    }
+    const res = await fetch(`/api/user/changeusername`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(hasUsername),
+    });
+
+    if (res.ok) {
+      addToast("Username changed!", {
+        appearance: "success",
+        autoDismiss: true,
+      });
+      getSession();
+
+      setIsInput(!isInput);
+    }
+  };
+
+  const handleOnChange = (event) => {
+    setHasUsername(event.target.value);
   };
 
   const handleError = (str) => {};
@@ -105,17 +141,46 @@ const Profile = ({
                   <div className="grid grid-cols-2">
                     <div className="px-4 py-2 font-semibold">Username</div>
                     <div className="px-4 py-2 flex items-center space-x-2">
-                      <span>{username}</span>
+                      <span>{!isInput && hasUsername}</span>
                       <div className="group px-2 py-2">
-                        <span>
-                          <FontAwesomeIcon
-                            icon={faEdit}
-                            className="text-indigo-500 cursor-pointer group-hover:text-indigo-600"
-                          />
-                        </span>
-                        <span className="text-xs text-gray-400 text-normal cursor-pointer group-hover:text-gray-600">
-                          Edit
-                        </span>
+                        {!isInput && (
+                          <span className="has-tooltip">
+                            <span className="tooltip rounded-lg shadow-lg p-1 bg-gray-600 text-gray-100 -mt-8">
+                              You can change your username!
+                            </span>
+                            <FontAwesomeIcon
+                              icon={faEdit}
+                              className="text-indigo-500 cursor-pointer group-hover:text-indigo-600"
+                              onClick={() => setIsInput(!isInput)}
+                            />
+                          </span>
+                        )}
+                        {isInput && (
+                          <div>
+                            <form
+                              onSubmit={handleSubmit}
+                              className="flex items-center space-x-2"
+                            >
+                              <div className="">
+                                <input
+                                  type="text"
+                                  placeholder="Username"
+                                  value={hasUsername}
+                                  className="bg-gray-200 border border-blue-500 rounded-lg text-center focus:outline-none"
+                                  onChange={handleOnChange}
+                                />
+                              </div>
+                              <div className="">
+                                <button
+                                  type="submit"
+                                  className="px-2 py-1 bg-blue-500 rounded font-poppins text-base text-white hover:bg-opacity-80 active:outline-none hover:shadow-md active:ring-3 active:ring-blue-900 active:ring-rounded"
+                                >
+                                  Save
+                                </button>
+                              </div>
+                            </form>
+                          </div>
+                        )}
                       </div>
                     </div>
                   </div>
