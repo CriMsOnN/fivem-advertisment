@@ -13,7 +13,7 @@ We provide a way to advertise your fivem server or advertise your stream if you 
 - [x] Profile
 - [x] Working Modal (thanks to @headlessui/react)
 - [x] Change profile image
-- [] Change username
-- [] Change password
-- [] Apply for streamer
-- [] Apply for server advertisment
+- [ ] Change username
+- [ ] Change password
+- [ ] Apply for streamer
+- [ ] Apply for server advertisment
