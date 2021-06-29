@@ -1,6 +1,7 @@
 import React, { Fragment, useState } from "react";
 import { Dialog, Transition } from "@headlessui/react";
 import { motion } from "framer-motion";
+import { useSession } from "next-auth/client";
 
 interface Props {
   onClose: Function;
@@ -9,6 +10,7 @@ interface Props {
 }
 
 const ProfileModal = ({ onClose, onSuccess, onError }: Props) => {
+  const [session] = useSession();
   const [isOpen, setIsOpen] = useState(true);
   const [isLoading, setIsLoading] = useState(false);
 

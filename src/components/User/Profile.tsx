@@ -115,7 +115,7 @@ const Profile = ({
             <div className="bg-white p-3 shadow-sm rounded-sm">
               <div className="flex items-center space-x-2 font-semibold text-gray-900 leading-8">
                 <span className="text-green-500">
-                  <svg
+                  {/* <svg
                     className="h-5"
                     xmlns="http://www.w3.org/2000/svg"
                     fill="none"
@@ -128,7 +128,7 @@ const Profile = ({
                       stroke-width="2"
                       d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"
                     />
-                  </svg>
+                  </svg> */}
                 </span>
                 <span className="tracking-wide">About</span>
               </div>

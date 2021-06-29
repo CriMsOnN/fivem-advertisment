@@ -3,6 +3,7 @@ import Providers from "next-auth/providers";
 import prisma from "~/lib/prisma";
 import { NextApiRequest, NextApiResponse } from "next";
 import { comparePassword } from "~/lib/passwordHandler";
+import * as jwt from "jsonwebtoken";
 
 interface credentialsProps {
   username: string;
@@ -15,13 +16,25 @@ const configuration = {
   },
   jwt: {
     secret: process.env.JWT_SECRET,
-    signingKey: process.env.JWT_SIGNING_KEY,
-    encryption: true,
-    encryptionKey: process.env.JWT_ENCRYPTION_KEY,
+    encode: async ({ secret, token, maxAge }) => {
+      const jwtClaims = {
+        username: token.username,
+        email: token.email,
+        user_id: token.id,
+        role: token.role,
+      };
+      const encodedToken = jwt.sign(jwtClaims, secret, { algorithm: "HS256" });
+      return encodedToken;
+    },
+    decode: async ({ secret, token, maxAge }) => {
+      const decodedToken: any = jwt.verify(token, secret, {
+        algorithms: ["HS256"],
+      });
+      return decodedToken;
+    },
   },
   callbacks: {
     async jwt(token, user) {
-      console.log(token);
       if (user?.userID) {
         token.id = user.userID;
       }
@@ -53,7 +66,10 @@ const configuration = {
       });
       session.username = result.username;
       session.role = token.role;
-      console.log(token);
+      session.token = jwt.sign(token, process.env.JWT_SECRET, {
+        algorithm: "HS256",
+      });
+
       return session;
     },
   },
