@@ -5,10 +5,10 @@ import { useRouter } from "next/router";
 import React, { useEffect, useState } from "react";
 import NProgress from "~/components/NProgress";
 import { Provider } from "next-auth/client";
-import { ToastProvider } from "react-toast-notifications";
 import Layout from "~/components/Layout/Layout";
 
 import Head from "next/head";
+import { ToastProvider } from "react-toast-notifications";
 
 const App: React.FC<AppProps> = ({ Component, pageProps }) => {
   const router = useRouter();

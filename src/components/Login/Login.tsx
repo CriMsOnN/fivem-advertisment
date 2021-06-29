@@ -50,9 +50,9 @@ const Login = ({ opened, onClose, onSuccess, onError }: Props) => {
       onError(results.error);
       setIsLoading(false);
     } else {
-      onSuccess();
       closeModal();
       setIsLoading(false);
+      onSuccess();
     }
   };
 

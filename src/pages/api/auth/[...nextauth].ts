@@ -13,8 +13,15 @@ const configuration = {
   sessions: {
     jwt: true,
   },
+  jwt: {
+    secret: process.env.JWT_SECRET,
+    signingKey: process.env.JWT_SIGNING_KEY,
+    encryption: true,
+    encryptionKey: process.env.JWT_ENCRYPTION_KEY,
+  },
   callbacks: {
     async jwt(token, user) {
+      console.log(token);
       if (user?.userID) {
         token.id = user.userID;
       }
@@ -46,6 +53,7 @@ const configuration = {
       });
       session.username = result.username;
       session.role = token.role;
+      console.log(token);
       return session;
     },
   },

@@ -26,7 +26,6 @@ const Header = () => {
   const [isOpenedRegistered, setOpenedRegistered] = useState(false);
   const [isOpenedLogin, setOpenedLogin] = useState(false);
 
-  console.log(session);
   const handleRegisterClose = () => {
     return setOpenedRegistered(!isOpenedRegistered);
   };
