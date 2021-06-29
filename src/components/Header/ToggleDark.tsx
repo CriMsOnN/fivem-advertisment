@@ -1,24 +1,37 @@
 import { useState, useEffect } from "react";
 import { Switch } from "@headlessui/react";
+import { useSession } from "next-auth/client";
 
 const ToggleDark = () => {
   const [enabled, setEnabled] = useState(false);
+
   useEffect(() => {
     const root = window.document.documentElement;
-    if (enabled) {
+    if (window.localStorage.theme === "dark") {
+      root.classList.add("dark");
+      setEnabled(true);
+    }
+  }, []);
+
+  const handleChange = () => {
+    const root = window.document.documentElement;
+    if (window.localStorage.theme === "dark") {
+      root.classList.remove("dark");
+      window.localStorage.theme = "light";
+      setEnabled(false);
+    } else {
       window.localStorage.theme = "dark";
       root.classList.add("dark");
-    } else {
-      window.localStorage.theme = "light";
-      root.classList.remove("dark");
+      setEnabled(true);
     }
-  }, [enabled]);
+  };
 
+  useEffect(() => {}, [enabled]);
   return (
     <div className="py-5">
       <Switch
         checked={enabled}
-        onChange={setEnabled}
+        onChange={handleChange}
         className={`${enabled ? "bg-teal-900" : "bg-teal-700"}
             bg-gray-900 dark:bg-gray-100 relative inline-flex flex-shrink-0 h-[20px] w-[60px] border-2 border-transparent rounded-full cursor-pointer transition-colors ease-in-out duration-200 focus:outline-none focus-visible:ring-2  focus-visible:ring-white focus-visible:ring-opacity-75`}
       >

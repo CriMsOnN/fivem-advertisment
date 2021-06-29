@@ -12,66 +12,6 @@ const Streamers = () => {
       <div className="flex justify-center items-center">
         <div className="grid grid-cols-4 gap-1 mt-5">
           <div className="border-2 border-blue-500">
-            {/* <iframe
-              loading="lazy"
-              src="https://player.twitch.tv/?channel=symfuhny&amp;parent=localhost&amp;muted=true"
-              width="400"
-              height="300"
-              scrolling="no"
-              allowFullScreen={true}
-            ></iframe> */}
-            <TwitchPlayer
-              channel="cr1msonnn"
-              id="cr1msonnn1"
-              theme="dark"
-              muted={true}
-              width={400}
-              height={300}
-              autoplay={true}
-              hideControls={true}
-              className="border-2 border-indigo-500"
-            />
-          </div>
-          <div className="border-2 border-blue-500">
-            <TwitchPlayer
-              channel="cr1msonnn"
-              id="cr1msonnn2"
-              theme="dark"
-              muted={true}
-              width={400}
-              height={300}
-              autoplay={true}
-              hideControls={true}
-              className="border-2 border-indigo-500"
-            />
-          </div>
-          <div className="border-2 border-blue-500">
-            <TwitchPlayer
-              channel="cr1msonnn"
-              id="cr1msonnn3"
-              theme="dark"
-              muted={true}
-              width={400}
-              height={300}
-              autoplay={true}
-              hideControls={true}
-              className="border-2 border-indigo-500"
-            />
-          </div>
-          <div className="border-2 border-blue-500">
-            <TwitchPlayer
-              channel="cr1msonnn"
-              id="cr1msonnn4"
-              theme="dark"
-              muted={true}
-              width={400}
-              height={300}
-              autoplay={true}
-              hideControls={true}
-              className="border-2 border-indigo-500"
-            />
-          </div>
-          <div className="border-2 border-blue-500">
             <TwitchPlayer
               channel="cr1msonnn"
               id="cr1msonnn5"
