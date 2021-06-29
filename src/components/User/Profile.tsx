@@ -5,15 +5,23 @@ import { faEdit } from "@fortawesome/free-solid-svg-icons";
 import ProfileModal from "./ProfileModal";
 import React, { useState, useEffect } from "react";
 import { useToasts } from "react-toast-notifications";
+import ProfileServers from "./ProfileServers";
 
 interface Props {
   firstname: string;
   lastname: string;
   email: string;
   image: string;
+  servers: string[];
 }
 
-const Profile = ({ firstname, lastname, email, image: image_url }: Props) => {
+const Profile = ({
+  firstname,
+  lastname,
+  email,
+  image: image_url,
+  servers,
+}: Props) => {
   const [isOpened, setIsOpened] = useState(false);
   const [image, setImage] = useState(image_url);
   const [session, isLoading] = useSession();
@@ -189,6 +197,7 @@ const Profile = ({ firstname, lastname, email, image: image_url }: Props) => {
             </div>
           </div>
         </div>
+        <ProfileServers servers={servers} />
       </div>
       {isOpened && (
         <ProfileModal

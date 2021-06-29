@@ -7,9 +7,10 @@ interface Props {
   lastname: string;
   email: string;
   image: string;
+  servers: string[];
 }
 
-const ProfilePage = ({ firstname, lastname, email, image }: Props) => {
+const ProfilePage = ({ firstname, lastname, email, image, servers }: Props) => {
   return (
     <div>
       <Profile
@@ -17,6 +18,7 @@ const ProfilePage = ({ firstname, lastname, email, image }: Props) => {
         lastname={lastname}
         email={email}
         image={image}
+        servers={servers}
       />
     </div>
   );
@@ -36,6 +38,9 @@ export async function getServerSideProps(ctx) {
     where: {
       username: session.username,
     },
+    include: {
+      servers: true,
+    },
   });
 
   if (user) {
@@ -46,6 +51,7 @@ export async function getServerSideProps(ctx) {
         email: user.email,
         username: user.username,
         image: user.image,
+        servers: user.servers,
       },
     };
   } else {
