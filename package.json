@@ -5,7 +5,8 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "docker-logs": "docker-compose logs -f -t"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.35",
@@ -19,12 +20,10 @@
     "@tanem/react-nprogress": "^3.0.70",
     "@types/bcrypt": "^5.0.0",
     "bcrypt": "^5.0.1",
-    "bcryptjs": "^2.4.3",
     "cloudinary": "^1.26.1",
     "cookie": "^0.4.1",
     "framer-motion": "^4.1.17",
     "jsonwebtoken": "^8.5.1",
-    "multer": "^1.4.2",
     "next": "10.x",
     "next-auth": "^3.27.0",
     "prisma": "2.25.0",
